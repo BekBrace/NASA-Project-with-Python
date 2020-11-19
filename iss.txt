@@ -1,0 +1,11 @@
+There are currently 7 astronauts on the ISS: 
+
+Sergey Ryzhikov - on board
+Kate Rubins - on board
+Sergey Kud-Sverchkov - on board
+Mike Hopkins - on board
+Victor Glover - on board
+Shannon Walker - on board
+Soichi Noguchi - on board
+
+Your current lat / long is: [51.5313, 20.0085]
