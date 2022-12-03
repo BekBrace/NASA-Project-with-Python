@@ -6,9 +6,13 @@ import time
 import webbrowser
 import geocoder
 
+#Free API
 url = "http://api.open-notify.org/astros.json"
+# Opening the url using request module
 response = urllib.request.urlopen(url)
+#Loading the json file (reading it)
 result = json.loads(response.read())
+#Opening the text file
 file = open("iss.txt", "w")
 file.write("There are currently " +
            str(result["number"]) + " astronauts on the ISS: \n\n")
