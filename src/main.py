@@ -41,7 +41,7 @@ def get_iss_turtle(resoloution: tuple = (1280, 720)):
 
 def update_possition(iss: turtle.Turtle,
                      api_url: str = "http://api.open-notify.org/iss-now.json",
-                     sleep_duration: int = 2):
+                     sleep_duration: int = 5):
 
     while True:
         # load the current status of the ISS in real-time
