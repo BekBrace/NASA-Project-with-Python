@@ -45,7 +45,11 @@ def update_possition(iss: turtle.Turtle,
 
     while True:
         # load the current status of the ISS in real-time
-        data = requests.get(api_url).json()
+        try:
+            data = requests.get(api_url).json()
+        except Exception as e:
+            print(e)
+            update_possition(iss, api_url, sleep_duration)
 
         if data['message'] == 'success':
             # Extract the ISS location
@@ -63,6 +67,7 @@ def update_possition(iss: turtle.Turtle,
 
             # Update the ISS turtle object location on the map
             iss.goto(longitude, latitude)
+            iss.pendown()
 
             # Refresh each sleep duration seconds
             time.sleep(sleep_duration)
